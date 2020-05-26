@@ -18,6 +18,7 @@ import ger.girod.spacex.ui.models.ListItem
 import ger.girod.spacex.ui.utils.ScreenState
 import kotlinx.android.synthetic.main.main_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.lang.IllegalArgumentException
 
 class MainFragment : Fragment(), LaunchListAdapter.OnRowClick,
     SortBottomSheetDialogFragment.Listener, FilterBottomSheetDialogFragment.Listener {
@@ -98,6 +99,7 @@ class MainFragment : Fragment(), LaunchListAdapter.OnRowClick,
             when (it) {
                 ScreenState.LoadingFinish -> progress_bar.visibility = View.GONE
                 ScreenState.Loading -> progress_bar.visibility = View.VISIBLE
+                else -> IllegalArgumentException("")
             }
         })
 

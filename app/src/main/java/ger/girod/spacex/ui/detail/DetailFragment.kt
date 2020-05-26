@@ -22,12 +22,13 @@ import kotlinx.android.synthetic.main.detail_fragment.*
 import kotlinx.android.synthetic.main.detail_fragment.progress_bar
 import kotlinx.android.synthetic.main.main_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.lang.IllegalArgumentException
 
 
 class DetailFragment : Fragment() {
 
     companion object {
-        fun newInstance(flightNumber: Int, rocketId: String): DetailFragment {
+        fun newInstance(flightNumber: Int, rocketId: String?): DetailFragment {
             val args: Bundle = Bundle().apply {
                 putInt(FLIGHT_NUMBER, flightNumber)
                 putString(ROCKET_ID, rocketId)
@@ -78,6 +79,7 @@ class DetailFragment : Fragment() {
             when (it) {
                 ScreenState.Loading -> progress_bar.visibility = View.VISIBLE
                 ScreenState.LoadingFinish -> progress_bar.visibility = View.GONE
+                else -> IllegalArgumentException("")
             }
         })
 

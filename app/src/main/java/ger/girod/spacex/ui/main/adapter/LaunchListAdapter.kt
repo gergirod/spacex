@@ -18,9 +18,6 @@ class LaunchListAdapter(private val onRowClick: OnRowClick) :
 
     private var launchList: ArrayList<ListItem> = ArrayList()
     private var filterList: ArrayList<ListItem> = ArrayList()
-    private val filter: MyFilter by lazy {
-        MyFilter(filterList, this)
-    }
 
     fun setList(launchList: ArrayList<ListItem>) {
         this.launchList.clear()

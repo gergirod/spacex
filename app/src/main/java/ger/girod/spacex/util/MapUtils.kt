@@ -11,15 +11,15 @@ object MapUtils {
     fun mapListIntoGroupBySortType(list: List<LaunchModel>, sortType: SortType): List<ListItem> {
 
         val map = groupDataIntoHashMap(list, sortType)
-        var list: ArrayList<ListItem> = ArrayList()
+        var itemlist: ArrayList<ListItem> = ArrayList()
         for ((key, value) in map) {
-            list.add(HeaderListItem(key))
+            itemlist.add(HeaderListItem(key))
             for (launch in value) {
-                list.add(LaunchListItem(launch))
+                itemlist.add(LaunchListItem(launch))
             }
         }
 
-        return list
+        return itemlist
     }
 
 
@@ -40,9 +40,9 @@ object MapUtils {
             if (linkedHashMap.containsKey(key)) {
                 linkedHashMap[key]?.add(launch)
             } else {
-                var list: ArrayList<LaunchModel> = ArrayList()
-                list.add(launch)
-                linkedHashMap[key] = list
+                var itemlist: ArrayList<LaunchModel> = ArrayList()
+                itemlist.add(launch)
+                linkedHashMap[key] = itemlist
             }
         }
 
