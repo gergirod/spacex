@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+    <string name="sort_by">Sort By...</string>
+    <string name="sort_by_date">Launch date (ascending)</string>
+    <string name="sort_by_date_desc">Launch date (descending)</string>
+    <string name="sort_by_mission_name">Mission name (a-z)</string>
+    <string name="sort_by_mission_name_desc">Mission name (z-a)</string>
+    <string name="filter_by">Filter By...</string>
+    <string name="filter_by_launch_success">Launch success</string>
+    <string name="remove_filter">remove filter</string>
+    <string name="launch_date">Launch date: %1$s</string>
+    <string name="from_site">From: %1$s</string>
+    <string name="details">Details: %1$s</string>
+    <string name="country">Country: %1$s</string>
+    <string name="company">Company: %1$s</string>
+    <string name="description">Description: %1$s</string>
+    <string name="more"><u>More...</u></string>
+    <string name="not_available">Action not available</string>
+</resources>
